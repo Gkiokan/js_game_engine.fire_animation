@@ -1,0 +1,35 @@
+
+
+$main_ground_height : 300px;
+
+.map {
+    position:absolute; z-index:100;
+    top:0px; left:0px; right:0px; bottom:0px;
+    display:block; width:auto; height:100%; 
+ 
+    .background {
+        position:relative; width:auto; height:100%; 
+        display:block;
+        background:#222;    
+    }
+    
+    .foreground {
+        position:absolute; z-index:110;
+        left:0px; right:0px; bottom:0px;
+        background: rgba(0,0,0,.2); border:1px solid black;
+        display:block; width:auto; height:200px;
+    }
+    
+    .mainground { 
+        position:absolute; z-index:105;
+        left:0px; right:0px; top:calc(50% - #{$main_ground_height} / 2); 
+        display:block; width:auto; height: $main_ground_height;
+        background:#444;
+    }
+
+    .data { 
+        position:absolute; left:0px; top:0px; right:0px; bottom:0px; z-index:107; overflow:hidden;
+        perspective: 1000px; transform-style: preserve-3d; 
+    }
+
+}

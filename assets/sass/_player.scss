@@ -1,0 +1,22 @@
+
+.playerdata {
+    
+    position:absolute; z-index:106;
+    top:0px; left:0px; right:0px; bottom:0px;
+    
+    
+    .player_model_01 {
+        
+        background-image: url('http://apollo-eu-uploads.s3.amazonaws.com/1433955660/Spark_inspiration.png');
+        background-repeat:no-repeat; 
+        background-position: center center;
+        background-size:cover;
+        
+        display:block; width:100px; height:100px;   
+        border-radius:50%;
+        position:absolute; top:50%; left:20%; 
+        border:1px solid darkblue;
+        box-shadow:0px 0px 4px snow;
+    }
+    
+}

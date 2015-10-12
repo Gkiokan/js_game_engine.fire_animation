@@ -1,0 +1,11 @@
+
+html, body { font-family: monospace; color:#fff; }
+
+
+.debug {
+ 
+        position:absolute; left:0px; top:50px;  z-index:200;
+        border:1px solid green;
+        display:block; width:200px; height:150px;
+        color:#fff; 
+}

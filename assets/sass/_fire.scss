@@ -1,0 +1,39 @@
+.fire {
+    
+    position:absolute; z-index:107; display:block;
+    border:1px solid aqua; width:1px; height:1px;
+    
+    
+    &.boom {
+        border-radius:50%; width:20px; height:20px; 
+        background: maroon; border:1px solid darkred;
+        box-shadow:0px 0px 2px tomato;
+        animation: drop 5s infinite; 
+    }
+    
+}
+
+
+
+@for $i from 1 through 100 {
+  $size: random(2) * 1px + 5;
+  $hue: $i * 3.6 + 0;
+  .boom:nth-child(#{$i}){
+    box-shadow: 0 0 $size 5px hsla($hue, 100%, 50%, 1);
+    background: hsla($hue, 100%, 50%, .5);
+    background: linear-gradient(top left, lighten(hsla($hue, 90%, 50%, .9), 20%) 10%, hsla($hue, 30%, 50%, .5));
+    border: 2px solid lighten(hsla($hue, 10%, 50%, .2), 20%);
+    transform: translate3d(random(1000)+px,random(1000)+px, 0);
+    animation-delay: random(400) * -.1s;
+    width: $size;
+    height: $size;
+
+  }
+}
+
+@keyframes drop {
+  100% {
+    transform: translate3d(0,0,0);
+    opacity: 0;
+  }
+}

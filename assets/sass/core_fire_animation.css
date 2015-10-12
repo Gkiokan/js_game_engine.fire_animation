@@ -1,0 +1,1362 @@
+/* line 12, D:/_svr/js_game_engine.fire_animation/assets/sass/_reset.scss */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* line 22, D:/_svr/js_game_engine.fire_animation/assets/sass/_reset.scss */
+body {
+  line-height: 1; }
+
+/* line 27, D:/_svr/js_game_engine.fire_animation/assets/sass/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 31, D:/_svr/js_game_engine.fire_animation/assets/sass/_reset.scss */
+nav ul {
+  list-style: none; }
+
+/* line 35, D:/_svr/js_game_engine.fire_animation/assets/sass/_reset.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 40, D:/_svr/js_game_engine.fire_animation/assets/sass/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 45, D:/_svr/js_game_engine.fire_animation/assets/sass/_reset.scss */
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+/* line 54, D:/_svr/js_game_engine.fire_animation/assets/sass/_reset.scss */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+/* line 61, D:/_svr/js_game_engine.fire_animation/assets/sass/_reset.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+/* line 68, D:/_svr/js_game_engine.fire_animation/assets/sass/_reset.scss */
+del {
+  text-decoration: line-through; }
+
+/* line 72, D:/_svr/js_game_engine.fire_animation/assets/sass/_reset.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+/* line 77, D:/_svr/js_game_engine.fire_animation/assets/sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+/* line 83, D:/_svr/js_game_engine.fire_animation/assets/sass/_reset.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/* line 92, D:/_svr/js_game_engine.fire_animation/assets/sass/_reset.scss */
+input, select {
+  vertical-align: middle; }
+
+/* line 2, D:/_svr/js_game_engine.fire_animation/assets/sass/_core.scss */
+html, body {
+  font-family: monospace;
+  color: #fff; }
+
+/* line 5, D:/_svr/js_game_engine.fire_animation/assets/sass/_core.scss */
+.debug {
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  z-index: 200;
+  border: 1px solid green;
+  display: block;
+  width: 200px;
+  height: 150px;
+  color: #fff; }
+
+/* line 5, D:/_svr/js_game_engine.fire_animation/assets/sass/_map.scss */
+.map {
+  position: absolute;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: block;
+  width: auto;
+  height: 100%; }
+  /* line 10, D:/_svr/js_game_engine.fire_animation/assets/sass/_map.scss */
+  .map .background {
+    position: relative;
+    width: auto;
+    height: 100%;
+    display: block;
+    background: #222; }
+  /* line 16, D:/_svr/js_game_engine.fire_animation/assets/sass/_map.scss */
+  .map .foreground {
+    position: absolute;
+    z-index: 110;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid black;
+    display: block;
+    width: auto;
+    height: 200px; }
+  /* line 23, D:/_svr/js_game_engine.fire_animation/assets/sass/_map.scss */
+  .map .mainground {
+    position: absolute;
+    z-index: 105;
+    left: 0px;
+    right: 0px;
+    top: calc(50% - 300px / 2);
+    display: block;
+    width: auto;
+    height: 300px;
+    background: #444; }
+  /* line 30, D:/_svr/js_game_engine.fire_animation/assets/sass/_map.scss */
+  .map .data {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 107;
+    overflow: hidden;
+    perspective: 1000px;
+    transform-style: preserve-3d; }
+
+/* line 3, D:/_svr/js_game_engine.fire_animation/assets/sass/_ui.scss */
+.ui {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 220; }
+  /* line 7, D:/_svr/js_game_engine.fire_animation/assets/sass/_ui.scss */
+  .ui .player {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: block;
+    width: 200px;
+    border: 1px solid aqua;
+    color: #fff; }
+    /* line 11, D:/_svr/js_game_engine.fire_animation/assets/sass/_ui.scss */
+    .ui .player .name {
+      background: #222; }
+    /* line 12, D:/_svr/js_game_engine.fire_animation/assets/sass/_ui.scss */
+    .ui .player .hp {
+      background: maroon; }
+    /* line 13, D:/_svr/js_game_engine.fire_animation/assets/sass/_ui.scss */
+    .ui .player .mp {
+      background: aqua; }
+    /* line 15, D:/_svr/js_game_engine.fire_animation/assets/sass/_ui.scss */
+    .ui .player .mp, .ui .player .hp {
+      height: 10px;
+      width: auto; }
+  /* line 18, D:/_svr/js_game_engine.fire_animation/assets/sass/_ui.scss */
+  .ui .playerlist {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 200px;
+    display: block;
+    width: 200px;
+    border: 1px solid aqua; }
+  /* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_ui.scss */
+  .ui .chat {
+    display: none;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 200px;
+    height: 500px;
+    border: 1px solid aqua; }
+
+/* line 2, D:/_svr/js_game_engine.fire_animation/assets/sass/_player.scss */
+.playerdata {
+  position: absolute;
+  z-index: 106;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; }
+  /* line 8, D:/_svr/js_game_engine.fire_animation/assets/sass/_player.scss */
+  .playerdata .player_model_01 {
+    background-image: url("http://apollo-eu-uploads.s3.amazonaws.com/1433955660/Spark_inspiration.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    border: 1px solid darkblue;
+    box-shadow: 0px 0px 4px snow; }
+
+/* line 1, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.fire {
+  position: absolute;
+  z-index: 107;
+  display: block;
+  border: 1px solid aqua;
+  width: 1px;
+  height: 1px; }
+  /* line 7, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+  .fire.boom {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: maroon;
+    border: 1px solid darkred;
+    box-shadow: 0px 0px 2px tomato;
+    animation: drop 5s infinite; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(1) {
+  box-shadow: 0 0 36px 5px #ff0f00;
+  background: rgba(255, 15, 0, 0.5);
+  background: linear-gradient(top left, rgba(255, 111, 102, 0.9) 10%, rgba(255, 15, 0, 0.5));
+  border: 2px solid rgba(255, 111, 102, 0.2);
+  transform: translate3d(927px, 645px, 0);
+  animation-delay: -29.9s;
+  width: 36px;
+  height: 36px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(2) {
+  box-shadow: 0 0 68px 5px #ff1f00;
+  background: rgba(255, 31, 0, 0.5);
+  background: linear-gradient(top left, rgba(255, 120, 102, 0.9) 10%, rgba(255, 31, 0, 0.5));
+  border: 2px solid rgba(255, 120, 102, 0.2);
+  transform: translate3d(644px, 233px, 0);
+  animation-delay: -12.3s;
+  width: 68px;
+  height: 68px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(3) {
+  box-shadow: 0 0 50px 5px #ff2e00;
+  background: rgba(255, 46, 0, 0.5);
+  background: linear-gradient(top left, rgba(255, 130, 102, 0.9) 10%, rgba(255, 46, 0, 0.5));
+  border: 2px solid rgba(255, 130, 102, 0.2);
+  transform: translate3d(267px, 456px, 0);
+  animation-delay: -28.5s;
+  width: 50px;
+  height: 50px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(4) {
+  box-shadow: 0 0 95px 5px #ff3d00;
+  background: rgba(255, 61, 0, 0.5);
+  background: linear-gradient(top left, rgba(255, 139, 102, 0.9) 10%, rgba(255, 61, 0, 0.5));
+  border: 2px solid rgba(255, 139, 102, 0.2);
+  transform: translate3d(824px, 364px, 0);
+  animation-delay: -5.6s;
+  width: 95px;
+  height: 95px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(5) {
+  box-shadow: 0 0 94px 5px #ff4d00;
+  background: rgba(255, 77, 0, 0.5);
+  background: linear-gradient(top left, rgba(255, 148, 102, 0.9) 10%, rgba(255, 77, 0, 0.5));
+  border: 2px solid rgba(255, 148, 102, 0.2);
+  transform: translate3d(400px, 782px, 0);
+  animation-delay: -18.2s;
+  width: 94px;
+  height: 94px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(6) {
+  box-shadow: 0 0 69px 5px #ff5c00;
+  background: rgba(255, 92, 0, 0.5);
+  background: linear-gradient(top left, rgba(255, 157, 102, 0.9) 10%, rgba(255, 92, 0, 0.5));
+  border: 2px solid rgba(255, 157, 102, 0.2);
+  transform: translate3d(495px, 191px, 0);
+  animation-delay: -37s;
+  width: 69px;
+  height: 69px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(7) {
+  box-shadow: 0 0 75px 5px #ff6b00;
+  background: rgba(255, 107, 0, 0.5);
+  background: linear-gradient(top left, rgba(255, 166, 102, 0.9) 10%, rgba(255, 107, 0, 0.5));
+  border: 2px solid rgba(255, 166, 102, 0.2);
+  transform: translate3d(627px, 801px, 0);
+  animation-delay: -12.4s;
+  width: 75px;
+  height: 75px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(8) {
+  box-shadow: 0 0 37px 5px #ff7a00;
+  background: rgba(255, 122, 0, 0.5);
+  background: linear-gradient(top left, rgba(255, 175, 102, 0.9) 10%, rgba(255, 122, 0, 0.5));
+  border: 2px solid rgba(255, 175, 102, 0.2);
+  transform: translate3d(111px, 482px, 0);
+  animation-delay: -29.1s;
+  width: 37px;
+  height: 37px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(9) {
+  box-shadow: 0 0 88px 5px #ff8a00;
+  background: rgba(255, 138, 0, 0.5);
+  background: linear-gradient(top left, rgba(255, 185, 102, 0.9) 10%, rgba(255, 138, 0, 0.5));
+  border: 2px solid rgba(255, 185, 102, 0.2);
+  transform: translate3d(279px, 464px, 0);
+  animation-delay: -21.8s;
+  width: 88px;
+  height: 88px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(10) {
+  box-shadow: 0 0 38px 5px #ff9900;
+  background: rgba(255, 153, 0, 0.5);
+  background: linear-gradient(top left, rgba(255, 194, 102, 0.9) 10%, rgba(255, 153, 0, 0.5));
+  border: 2px solid rgba(255, 194, 102, 0.2);
+  transform: translate3d(447px, 272px, 0);
+  animation-delay: -24.9s;
+  width: 38px;
+  height: 38px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(11) {
+  box-shadow: 0 0 89px 5px #ffa800;
+  background: rgba(255, 168, 0, 0.5);
+  background: linear-gradient(top left, rgba(255, 203, 102, 0.9) 10%, rgba(255, 168, 0, 0.5));
+  border: 2px solid rgba(255, 203, 102, 0.2);
+  transform: translate3d(533px, 70px, 0);
+  animation-delay: -32.6s;
+  width: 89px;
+  height: 89px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(12) {
+  box-shadow: 0 0 68px 5px #ffb800;
+  background: rgba(255, 184, 0, 0.5);
+  background: linear-gradient(top left, rgba(255, 212, 102, 0.9) 10%, rgba(255, 184, 0, 0.5));
+  border: 2px solid rgba(255, 212, 102, 0.2);
+  transform: translate3d(269px, 832px, 0);
+  animation-delay: -18.6s;
+  width: 68px;
+  height: 68px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(13) {
+  box-shadow: 0 0 59px 5px #ffc700;
+  background: rgba(255, 199, 0, 0.5);
+  background: linear-gradient(top left, rgba(255, 221, 102, 0.9) 10%, rgba(255, 199, 0, 0.5));
+  border: 2px solid rgba(255, 221, 102, 0.2);
+  transform: translate3d(919px, 174px, 0);
+  animation-delay: -6.3s;
+  width: 59px;
+  height: 59px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(14) {
+  box-shadow: 0 0 62px 5px #ffd600;
+  background: rgba(255, 214, 0, 0.5);
+  background: linear-gradient(top left, rgba(255, 231, 102, 0.9) 10%, rgba(255, 214, 0, 0.5));
+  border: 2px solid rgba(255, 231, 102, 0.2);
+  transform: translate3d(107px, 132px, 0);
+  animation-delay: -37.2s;
+  width: 62px;
+  height: 62px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(15) {
+  box-shadow: 0 0 33px 5px #ffe500;
+  background: rgba(255, 229, 0, 0.5);
+  background: linear-gradient(top left, rgba(255, 240, 102, 0.9) 10%, rgba(255, 229, 0, 0.5));
+  border: 2px solid rgba(255, 240, 102, 0.2);
+  transform: translate3d(353px, 696px, 0);
+  animation-delay: -21s;
+  width: 33px;
+  height: 33px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(16) {
+  box-shadow: 0 0 79px 5px #fff500;
+  background: rgba(255, 245, 0, 0.5);
+  background: linear-gradient(top left, rgba(255, 249, 102, 0.9) 10%, rgba(255, 245, 0, 0.5));
+  border: 2px solid rgba(255, 249, 102, 0.2);
+  transform: translate3d(154px, 567px, 0);
+  animation-delay: -12.3s;
+  width: 79px;
+  height: 79px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(17) {
+  box-shadow: 0 0 68px 5px #faff00;
+  background: rgba(250, 255, 0, 0.5);
+  background: linear-gradient(top left, rgba(252, 255, 102, 0.9) 10%, rgba(250, 255, 0, 0.5));
+  border: 2px solid rgba(252, 255, 102, 0.2);
+  transform: translate3d(830px, 801px, 0);
+  animation-delay: -6.6s;
+  width: 68px;
+  height: 68px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(18) {
+  box-shadow: 0 0 91px 5px #ebff00;
+  background: rgba(235, 255, 0, 0.5);
+  background: linear-gradient(top left, rgba(243, 255, 102, 0.9) 10%, rgba(235, 255, 0, 0.5));
+  border: 2px solid rgba(243, 255, 102, 0.2);
+  transform: translate3d(887px, 320px, 0);
+  animation-delay: -30.6s;
+  width: 91px;
+  height: 91px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(19) {
+  box-shadow: 0 0 88px 5px #dbff00;
+  background: rgba(219, 255, 0, 0.5);
+  background: linear-gradient(top left, rgba(234, 255, 102, 0.9) 10%, rgba(219, 255, 0, 0.5));
+  border: 2px solid rgba(234, 255, 102, 0.2);
+  transform: translate3d(930px, 124px, 0);
+  animation-delay: -28.3s;
+  width: 88px;
+  height: 88px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(20) {
+  box-shadow: 0 0 75px 5px #ccff00;
+  background: rgba(204, 255, 0, 0.5);
+  background: linear-gradient(top left, rgba(224, 255, 102, 0.9) 10%, rgba(204, 255, 0, 0.5));
+  border: 2px solid rgba(224, 255, 102, 0.2);
+  transform: translate3d(336px, 370px, 0);
+  animation-delay: -9.4s;
+  width: 75px;
+  height: 75px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(21) {
+  box-shadow: 0 0 72px 5px #bdff00;
+  background: rgba(189, 255, 0, 0.5);
+  background: linear-gradient(top left, rgba(215, 255, 102, 0.9) 10%, rgba(189, 255, 0, 0.5));
+  border: 2px solid rgba(215, 255, 102, 0.2);
+  transform: translate3d(43px, 654px, 0);
+  animation-delay: -37.6s;
+  width: 72px;
+  height: 72px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(22) {
+  box-shadow: 0 0 23px 5px #adff00;
+  background: rgba(173, 255, 0, 0.5);
+  background: linear-gradient(top left, rgba(206, 255, 102, 0.9) 10%, rgba(173, 255, 0, 0.5));
+  border: 2px solid rgba(206, 255, 102, 0.2);
+  transform: translate3d(949px, 564px, 0);
+  animation-delay: -23.6s;
+  width: 23px;
+  height: 23px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(23) {
+  box-shadow: 0 0 52px 5px #9eff00;
+  background: rgba(158, 255, 0, 0.5);
+  background: linear-gradient(top left, rgba(197, 255, 102, 0.9) 10%, rgba(158, 255, 0, 0.5));
+  border: 2px solid rgba(197, 255, 102, 0.2);
+  transform: translate3d(937px, 851px, 0);
+  animation-delay: -17.4s;
+  width: 52px;
+  height: 52px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(24) {
+  box-shadow: 0 0 40px 5px #8fff00;
+  background: rgba(143, 255, 0, 0.5);
+  background: linear-gradient(top left, rgba(188, 255, 102, 0.9) 10%, rgba(143, 255, 0, 0.5));
+  border: 2px solid rgba(188, 255, 102, 0.2);
+  transform: translate3d(692px, 928px, 0);
+  animation-delay: -33.1s;
+  width: 40px;
+  height: 40px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(25) {
+  box-shadow: 0 0 30px 5px #80ff00;
+  background: rgba(128, 255, 0, 0.5);
+  background: linear-gradient(top left, rgba(179, 255, 102, 0.9) 10%, rgba(128, 255, 0, 0.5));
+  border: 2px solid rgba(179, 255, 102, 0.2);
+  transform: translate3d(94px, 801px, 0);
+  animation-delay: -8.7s;
+  width: 30px;
+  height: 30px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(26) {
+  box-shadow: 0 0 95px 5px #70ff00;
+  background: rgba(112, 255, 0, 0.5);
+  background: linear-gradient(top left, rgba(169, 255, 102, 0.9) 10%, rgba(112, 255, 0, 0.5));
+  border: 2px solid rgba(169, 255, 102, 0.2);
+  transform: translate3d(953px, 784px, 0);
+  animation-delay: -8.6s;
+  width: 95px;
+  height: 95px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(27) {
+  box-shadow: 0 0 94px 5px #61ff00;
+  background: rgba(97, 255, 0, 0.5);
+  background: linear-gradient(top left, rgba(160, 255, 102, 0.9) 10%, rgba(97, 255, 0, 0.5));
+  border: 2px solid rgba(160, 255, 102, 0.2);
+  transform: translate3d(211px, 914px, 0);
+  animation-delay: -23.3s;
+  width: 94px;
+  height: 94px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(28) {
+  box-shadow: 0 0 28px 5px #52ff00;
+  background: rgba(82, 255, 0, 0.5);
+  background: linear-gradient(top left, rgba(151, 255, 102, 0.9) 10%, rgba(82, 255, 0, 0.5));
+  border: 2px solid rgba(151, 255, 102, 0.2);
+  transform: translate3d(906px, 216px, 0);
+  animation-delay: -34.5s;
+  width: 28px;
+  height: 28px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(29) {
+  box-shadow: 0 0 97px 5px #42ff00;
+  background: rgba(66, 255, 0, 0.5);
+  background: linear-gradient(top left, rgba(142, 255, 102, 0.9) 10%, rgba(66, 255, 0, 0.5));
+  border: 2px solid rgba(142, 255, 102, 0.2);
+  transform: translate3d(162px, 26px, 0);
+  animation-delay: -17.6s;
+  width: 97px;
+  height: 97px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(30) {
+  box-shadow: 0 0 57px 5px #33ff00;
+  background: rgba(51, 255, 0, 0.5);
+  background: linear-gradient(top left, rgba(133, 255, 102, 0.9) 10%, rgba(51, 255, 0, 0.5));
+  border: 2px solid rgba(133, 255, 102, 0.2);
+  transform: translate3d(419px, 385px, 0);
+  animation-delay: -18.9s;
+  width: 57px;
+  height: 57px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(31) {
+  box-shadow: 0 0 39px 5px #24ff00;
+  background: rgba(36, 255, 0, 0.5);
+  background: linear-gradient(top left, rgba(123, 255, 102, 0.9) 10%, rgba(36, 255, 0, 0.5));
+  border: 2px solid rgba(123, 255, 102, 0.2);
+  transform: translate3d(748px, 784px, 0);
+  animation-delay: -33.5s;
+  width: 39px;
+  height: 39px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(32) {
+  box-shadow: 0 0 69px 5px #14ff00;
+  background: rgba(20, 255, 0, 0.5);
+  background: linear-gradient(top left, rgba(114, 255, 102, 0.9) 10%, rgba(20, 255, 0, 0.5));
+  border: 2px solid rgba(114, 255, 102, 0.2);
+  transform: translate3d(40px, 326px, 0);
+  animation-delay: -9.9s;
+  width: 69px;
+  height: 69px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(33) {
+  box-shadow: 0 0 70px 5px #05ff00;
+  background: rgba(5, 255, 0, 0.5);
+  background: linear-gradient(top left, rgba(105, 255, 102, 0.9) 10%, rgba(5, 255, 0, 0.5));
+  border: 2px solid rgba(105, 255, 102, 0.2);
+  transform: translate3d(818px, 920px, 0);
+  animation-delay: -14.6s;
+  width: 70px;
+  height: 70px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(34) {
+  box-shadow: 0 0 99px 5px #00ff0a;
+  background: rgba(0, 255, 10, 0.5);
+  background: linear-gradient(top left, rgba(102, 255, 108, 0.9) 10%, rgba(0, 255, 10, 0.5));
+  border: 2px solid rgba(102, 255, 108, 0.2);
+  transform: translate3d(845px, 243px, 0);
+  animation-delay: -29s;
+  width: 99px;
+  height: 99px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(35) {
+  box-shadow: 0 0 40px 5px #00ff19;
+  background: rgba(0, 255, 25, 0.5);
+  background: linear-gradient(top left, rgba(102, 255, 117, 0.9) 10%, rgba(0, 255, 25, 0.5));
+  border: 2px solid rgba(102, 255, 117, 0.2);
+  transform: translate3d(465px, 28px, 0);
+  animation-delay: -6s;
+  width: 40px;
+  height: 40px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(36) {
+  box-shadow: 0 0 66px 5px #00ff29;
+  background: rgba(0, 255, 41, 0.5);
+  background: linear-gradient(top left, rgba(102, 255, 126, 0.9) 10%, rgba(0, 255, 41, 0.5));
+  border: 2px solid rgba(102, 255, 126, 0.2);
+  transform: translate3d(74px, 659px, 0);
+  animation-delay: -31.6s;
+  width: 66px;
+  height: 66px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(37) {
+  box-shadow: 0 0 95px 5px #00ff38;
+  background: rgba(0, 255, 56, 0.5);
+  background: linear-gradient(top left, rgba(102, 255, 136, 0.9) 10%, rgba(0, 255, 56, 0.5));
+  border: 2px solid rgba(102, 255, 136, 0.2);
+  transform: translate3d(898px, 485px, 0);
+  animation-delay: -19.8s;
+  width: 95px;
+  height: 95px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(38) {
+  box-shadow: 0 0 24px 5px #00ff47;
+  background: rgba(0, 255, 71, 0.5);
+  background: linear-gradient(top left, rgba(102, 255, 145, 0.9) 10%, rgba(0, 255, 71, 0.5));
+  border: 2px solid rgba(102, 255, 145, 0.2);
+  transform: translate3d(360px, 983px, 0);
+  animation-delay: -29.1s;
+  width: 24px;
+  height: 24px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(39) {
+  box-shadow: 0 0 63px 5px #00ff57;
+  background: rgba(0, 255, 87, 0.5);
+  background: linear-gradient(top left, rgba(102, 255, 154, 0.9) 10%, rgba(0, 255, 87, 0.5));
+  border: 2px solid rgba(102, 255, 154, 0.2);
+  transform: translate3d(44px, 722px, 0);
+  animation-delay: -15.7s;
+  width: 63px;
+  height: 63px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(40) {
+  box-shadow: 0 0 45px 5px #00ff66;
+  background: rgba(0, 255, 102, 0.5);
+  background: linear-gradient(top left, rgba(102, 255, 163, 0.9) 10%, rgba(0, 255, 102, 0.5));
+  border: 2px solid rgba(102, 255, 163, 0.2);
+  transform: translate3d(244px, 666px, 0);
+  animation-delay: -39.7s;
+  width: 45px;
+  height: 45px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(41) {
+  box-shadow: 0 0 72px 5px #00ff75;
+  background: rgba(0, 255, 117, 0.5);
+  background: linear-gradient(top left, rgba(102, 255, 172, 0.9) 10%, rgba(0, 255, 117, 0.5));
+  border: 2px solid rgba(102, 255, 172, 0.2);
+  transform: translate3d(50px, 317px, 0);
+  animation-delay: -7.1s;
+  width: 72px;
+  height: 72px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(42) {
+  box-shadow: 0 0 98px 5px #00ff85;
+  background: rgba(0, 255, 133, 0.5);
+  background: linear-gradient(top left, rgba(102, 255, 182, 0.9) 10%, rgba(0, 255, 133, 0.5));
+  border: 2px solid rgba(102, 255, 182, 0.2);
+  transform: translate3d(765px, 844px, 0);
+  animation-delay: -15.1s;
+  width: 98px;
+  height: 98px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(43) {
+  box-shadow: 0 0 78px 5px #00ff94;
+  background: rgba(0, 255, 148, 0.5);
+  background: linear-gradient(top left, rgba(102, 255, 191, 0.9) 10%, rgba(0, 255, 148, 0.5));
+  border: 2px solid rgba(102, 255, 191, 0.2);
+  transform: translate3d(427px, 222px, 0);
+  animation-delay: -12s;
+  width: 78px;
+  height: 78px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(44) {
+  box-shadow: 0 0 86px 5px #00ffa3;
+  background: rgba(0, 255, 163, 0.5);
+  background: linear-gradient(top left, rgba(102, 255, 200, 0.9) 10%, rgba(0, 255, 163, 0.5));
+  border: 2px solid rgba(102, 255, 200, 0.2);
+  transform: translate3d(980px, 289px, 0);
+  animation-delay: -35s;
+  width: 86px;
+  height: 86px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(45) {
+  box-shadow: 0 0 31px 5px #00ffb3;
+  background: rgba(0, 255, 179, 0.5);
+  background: linear-gradient(top left, rgba(102, 255, 209, 0.9) 10%, rgba(0, 255, 179, 0.5));
+  border: 2px solid rgba(102, 255, 209, 0.2);
+  transform: translate3d(621px, 650px, 0);
+  animation-delay: -24.9s;
+  width: 31px;
+  height: 31px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(46) {
+  box-shadow: 0 0 46px 5px #00ffc2;
+  background: rgba(0, 255, 194, 0.5);
+  background: linear-gradient(top left, rgba(102, 255, 218, 0.9) 10%, rgba(0, 255, 194, 0.5));
+  border: 2px solid rgba(102, 255, 218, 0.2);
+  transform: translate3d(441px, 598px, 0);
+  animation-delay: -14.1s;
+  width: 46px;
+  height: 46px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(47) {
+  box-shadow: 0 0 33px 5px #00ffd1;
+  background: rgba(0, 255, 209, 0.5);
+  background: linear-gradient(top left, rgba(102, 255, 227, 0.9) 10%, rgba(0, 255, 209, 0.5));
+  border: 2px solid rgba(102, 255, 227, 0.2);
+  transform: translate3d(35px, 843px, 0);
+  animation-delay: -40s;
+  width: 33px;
+  height: 33px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(48) {
+  box-shadow: 0 0 26px 5px #00ffe0;
+  background: rgba(0, 255, 224, 0.5);
+  background: linear-gradient(top left, rgba(102, 255, 237, 0.9) 10%, rgba(0, 255, 224, 0.5));
+  border: 2px solid rgba(102, 255, 237, 0.2);
+  transform: translate3d(642px, 934px, 0);
+  animation-delay: -6.4s;
+  width: 26px;
+  height: 26px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(49) {
+  box-shadow: 0 0 42px 5px #00fff0;
+  background: rgba(0, 255, 240, 0.5);
+  background: linear-gradient(top left, rgba(102, 255, 246, 0.9) 10%, rgba(0, 255, 240, 0.5));
+  border: 2px solid rgba(102, 255, 246, 0.2);
+  transform: translate3d(701px, 712px, 0);
+  animation-delay: -0.5s;
+  width: 42px;
+  height: 42px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(50) {
+  box-shadow: 0 0 83px 5px cyan;
+  background: rgba(0, 255, 255, 0.5);
+  background: linear-gradient(top left, rgba(102, 255, 255, 0.9) 10%, rgba(0, 255, 255, 0.5));
+  border: 2px solid rgba(102, 255, 255, 0.2);
+  transform: translate3d(640px, 998px, 0);
+  animation-delay: -27.1s;
+  width: 83px;
+  height: 83px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(51) {
+  box-shadow: 0 0 27px 5px #00f0ff;
+  background: rgba(0, 240, 255, 0.5);
+  background: linear-gradient(top left, rgba(102, 246, 255, 0.9) 10%, rgba(0, 240, 255, 0.5));
+  border: 2px solid rgba(102, 246, 255, 0.2);
+  transform: translate3d(365px, 248px, 0);
+  animation-delay: -27.9s;
+  width: 27px;
+  height: 27px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(52) {
+  box-shadow: 0 0 29px 5px #00e0ff;
+  background: rgba(0, 224, 255, 0.5);
+  background: linear-gradient(top left, rgba(102, 237, 255, 0.9) 10%, rgba(0, 224, 255, 0.5));
+  border: 2px solid rgba(102, 237, 255, 0.2);
+  transform: translate3d(998px, 171px, 0);
+  animation-delay: -14.7s;
+  width: 29px;
+  height: 29px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(53) {
+  box-shadow: 0 0 35px 5px #00d1ff;
+  background: rgba(0, 209, 255, 0.5);
+  background: linear-gradient(top left, rgba(102, 227, 255, 0.9) 10%, rgba(0, 209, 255, 0.5));
+  border: 2px solid rgba(102, 227, 255, 0.2);
+  transform: translate3d(659px, 558px, 0);
+  animation-delay: -4.7s;
+  width: 35px;
+  height: 35px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(54) {
+  box-shadow: 0 0 68px 5px #00c2ff;
+  background: rgba(0, 194, 255, 0.5);
+  background: linear-gradient(top left, rgba(102, 218, 255, 0.9) 10%, rgba(0, 194, 255, 0.5));
+  border: 2px solid rgba(102, 218, 255, 0.2);
+  transform: translate3d(646px, 26px, 0);
+  animation-delay: -18.2s;
+  width: 68px;
+  height: 68px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(55) {
+  box-shadow: 0 0 40px 5px #00b2ff;
+  background: rgba(0, 178, 255, 0.5);
+  background: linear-gradient(top left, rgba(102, 209, 255, 0.9) 10%, rgba(0, 178, 255, 0.5));
+  border: 2px solid rgba(102, 209, 255, 0.2);
+  transform: translate3d(450px, 941px, 0);
+  animation-delay: -6.8s;
+  width: 40px;
+  height: 40px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(56) {
+  box-shadow: 0 0 50px 5px #00a3ff;
+  background: rgba(0, 163, 255, 0.5);
+  background: linear-gradient(top left, rgba(102, 200, 255, 0.9) 10%, rgba(0, 163, 255, 0.5));
+  border: 2px solid rgba(102, 200, 255, 0.2);
+  transform: translate3d(767px, 876px, 0);
+  animation-delay: -12.4s;
+  width: 50px;
+  height: 50px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(57) {
+  box-shadow: 0 0 81px 5px #0094ff;
+  background: rgba(0, 148, 255, 0.5);
+  background: linear-gradient(top left, rgba(102, 191, 255, 0.9) 10%, rgba(0, 148, 255, 0.5));
+  border: 2px solid rgba(102, 191, 255, 0.2);
+  transform: translate3d(679px, 233px, 0);
+  animation-delay: -11.8s;
+  width: 81px;
+  height: 81px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(58) {
+  box-shadow: 0 0 48px 5px #0085ff;
+  background: rgba(0, 133, 255, 0.5);
+  background: linear-gradient(top left, rgba(102, 182, 255, 0.9) 10%, rgba(0, 133, 255, 0.5));
+  border: 2px solid rgba(102, 182, 255, 0.2);
+  transform: translate3d(329px, 75px, 0);
+  animation-delay: -0.6s;
+  width: 48px;
+  height: 48px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(59) {
+  box-shadow: 0 0 38px 5px #0075ff;
+  background: rgba(0, 117, 255, 0.5);
+  background: linear-gradient(top left, rgba(102, 172, 255, 0.9) 10%, rgba(0, 117, 255, 0.5));
+  border: 2px solid rgba(102, 172, 255, 0.2);
+  transform: translate3d(81px, 697px, 0);
+  animation-delay: -4.8s;
+  width: 38px;
+  height: 38px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(60) {
+  box-shadow: 0 0 25px 5px #0066ff;
+  background: rgba(0, 102, 255, 0.5);
+  background: linear-gradient(top left, rgba(102, 163, 255, 0.9) 10%, rgba(0, 102, 255, 0.5));
+  border: 2px solid rgba(102, 163, 255, 0.2);
+  transform: translate3d(20px, 19px, 0);
+  animation-delay: -19.6s;
+  width: 25px;
+  height: 25px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(61) {
+  box-shadow: 0 0 64px 5px #0057ff;
+  background: rgba(0, 87, 255, 0.5);
+  background: linear-gradient(top left, rgba(102, 154, 255, 0.9) 10%, rgba(0, 87, 255, 0.5));
+  border: 2px solid rgba(102, 154, 255, 0.2);
+  transform: translate3d(424px, 752px, 0);
+  animation-delay: -22.6s;
+  width: 64px;
+  height: 64px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(62) {
+  box-shadow: 0 0 88px 5px #0047ff;
+  background: rgba(0, 71, 255, 0.5);
+  background: linear-gradient(top left, rgba(102, 145, 255, 0.9) 10%, rgba(0, 71, 255, 0.5));
+  border: 2px solid rgba(102, 145, 255, 0.2);
+  transform: translate3d(90px, 935px, 0);
+  animation-delay: -10.8s;
+  width: 88px;
+  height: 88px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(63) {
+  box-shadow: 0 0 40px 5px #0038ff;
+  background: rgba(0, 56, 255, 0.5);
+  background: linear-gradient(top left, rgba(102, 136, 255, 0.9) 10%, rgba(0, 56, 255, 0.5));
+  border: 2px solid rgba(102, 136, 255, 0.2);
+  transform: translate3d(425px, 583px, 0);
+  animation-delay: -22.8s;
+  width: 40px;
+  height: 40px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(64) {
+  box-shadow: 0 0 71px 5px #0029ff;
+  background: rgba(0, 41, 255, 0.5);
+  background: linear-gradient(top left, rgba(102, 126, 255, 0.9) 10%, rgba(0, 41, 255, 0.5));
+  border: 2px solid rgba(102, 126, 255, 0.2);
+  transform: translate3d(214px, 505px, 0);
+  animation-delay: -4.9s;
+  width: 71px;
+  height: 71px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(65) {
+  box-shadow: 0 0 87px 5px #0019ff;
+  background: rgba(0, 25, 255, 0.5);
+  background: linear-gradient(top left, rgba(102, 117, 255, 0.9) 10%, rgba(0, 25, 255, 0.5));
+  border: 2px solid rgba(102, 117, 255, 0.2);
+  transform: translate3d(603px, 35px, 0);
+  animation-delay: -24.5s;
+  width: 87px;
+  height: 87px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(66) {
+  box-shadow: 0 0 76px 5px #000aff;
+  background: rgba(0, 10, 255, 0.5);
+  background: linear-gradient(top left, rgba(102, 108, 255, 0.9) 10%, rgba(0, 10, 255, 0.5));
+  border: 2px solid rgba(102, 108, 255, 0.2);
+  transform: translate3d(837px, 911px, 0);
+  animation-delay: -11.5s;
+  width: 76px;
+  height: 76px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(67) {
+  box-shadow: 0 0 36px 5px #0500ff;
+  background: rgba(5, 0, 255, 0.5);
+  background: linear-gradient(top left, rgba(105, 102, 255, 0.9) 10%, rgba(5, 0, 255, 0.5));
+  border: 2px solid rgba(105, 102, 255, 0.2);
+  transform: translate3d(611px, 686px, 0);
+  animation-delay: -26s;
+  width: 36px;
+  height: 36px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(68) {
+  box-shadow: 0 0 82px 5px #1400ff;
+  background: rgba(20, 0, 255, 0.5);
+  background: linear-gradient(top left, rgba(114, 102, 255, 0.9) 10%, rgba(20, 0, 255, 0.5));
+  border: 2px solid rgba(114, 102, 255, 0.2);
+  transform: translate3d(60px, 167px, 0);
+  animation-delay: -33s;
+  width: 82px;
+  height: 82px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(69) {
+  box-shadow: 0 0 67px 5px #2400ff;
+  background: rgba(36, 0, 255, 0.5);
+  background: linear-gradient(top left, rgba(123, 102, 255, 0.9) 10%, rgba(36, 0, 255, 0.5));
+  border: 2px solid rgba(123, 102, 255, 0.2);
+  transform: translate3d(845px, 961px, 0);
+  animation-delay: -0.4s;
+  width: 67px;
+  height: 67px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(70) {
+  box-shadow: 0 0 89px 5px #3300ff;
+  background: rgba(51, 0, 255, 0.5);
+  background: linear-gradient(top left, rgba(133, 102, 255, 0.9) 10%, rgba(51, 0, 255, 0.5));
+  border: 2px solid rgba(133, 102, 255, 0.2);
+  transform: translate3d(734px, 897px, 0);
+  animation-delay: -26.1s;
+  width: 89px;
+  height: 89px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(71) {
+  box-shadow: 0 0 40px 5px #4200ff;
+  background: rgba(66, 0, 255, 0.5);
+  background: linear-gradient(top left, rgba(142, 102, 255, 0.9) 10%, rgba(66, 0, 255, 0.5));
+  border: 2px solid rgba(142, 102, 255, 0.2);
+  transform: translate3d(123px, 186px, 0);
+  animation-delay: -8.6s;
+  width: 40px;
+  height: 40px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(72) {
+  box-shadow: 0 0 22px 5px #5200ff;
+  background: rgba(82, 0, 255, 0.5);
+  background: linear-gradient(top left, rgba(151, 102, 255, 0.9) 10%, rgba(82, 0, 255, 0.5));
+  border: 2px solid rgba(151, 102, 255, 0.2);
+  transform: translate3d(966px, 912px, 0);
+  animation-delay: -19.6s;
+  width: 22px;
+  height: 22px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(73) {
+  box-shadow: 0 0 32px 5px #6100ff;
+  background: rgba(97, 0, 255, 0.5);
+  background: linear-gradient(top left, rgba(160, 102, 255, 0.9) 10%, rgba(97, 0, 255, 0.5));
+  border: 2px solid rgba(160, 102, 255, 0.2);
+  transform: translate3d(537px, 299px, 0);
+  animation-delay: -2.1s;
+  width: 32px;
+  height: 32px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(74) {
+  box-shadow: 0 0 38px 5px #7000ff;
+  background: rgba(112, 0, 255, 0.5);
+  background: linear-gradient(top left, rgba(169, 102, 255, 0.9) 10%, rgba(112, 0, 255, 0.5));
+  border: 2px solid rgba(169, 102, 255, 0.2);
+  transform: translate3d(323px, 166px, 0);
+  animation-delay: -24.9s;
+  width: 38px;
+  height: 38px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(75) {
+  box-shadow: 0 0 80px 5px #7f00ff;
+  background: rgba(127, 0, 255, 0.5);
+  background: linear-gradient(top left, rgba(178, 102, 255, 0.9) 10%, rgba(127, 0, 255, 0.5));
+  border: 2px solid rgba(178, 102, 255, 0.2);
+  transform: translate3d(474px, 644px, 0);
+  animation-delay: -27.3s;
+  width: 80px;
+  height: 80px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(76) {
+  box-shadow: 0 0 86px 5px #8f00ff;
+  background: rgba(143, 0, 255, 0.5);
+  background: linear-gradient(top left, rgba(188, 102, 255, 0.9) 10%, rgba(143, 0, 255, 0.5));
+  border: 2px solid rgba(188, 102, 255, 0.2);
+  transform: translate3d(818px, 380px, 0);
+  animation-delay: -38.1s;
+  width: 86px;
+  height: 86px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(77) {
+  box-shadow: 0 0 27px 5px #9e00ff;
+  background: rgba(158, 0, 255, 0.5);
+  background: linear-gradient(top left, rgba(197, 102, 255, 0.9) 10%, rgba(158, 0, 255, 0.5));
+  border: 2px solid rgba(197, 102, 255, 0.2);
+  transform: translate3d(320px, 647px, 0);
+  animation-delay: -18.7s;
+  width: 27px;
+  height: 27px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(78) {
+  box-shadow: 0 0 45px 5px #ad00ff;
+  background: rgba(173, 0, 255, 0.5);
+  background: linear-gradient(top left, rgba(206, 102, 255, 0.9) 10%, rgba(173, 0, 255, 0.5));
+  border: 2px solid rgba(206, 102, 255, 0.2);
+  transform: translate3d(59px, 39px, 0);
+  animation-delay: -17.9s;
+  width: 45px;
+  height: 45px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(79) {
+  box-shadow: 0 0 75px 5px #bd00ff;
+  background: rgba(189, 0, 255, 0.5);
+  background: linear-gradient(top left, rgba(215, 102, 255, 0.9) 10%, rgba(189, 0, 255, 0.5));
+  border: 2px solid rgba(215, 102, 255, 0.2);
+  transform: translate3d(966px, 639px, 0);
+  animation-delay: -21.9s;
+  width: 75px;
+  height: 75px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(80) {
+  box-shadow: 0 0 55px 5px #cc00ff;
+  background: rgba(204, 0, 255, 0.5);
+  background: linear-gradient(top left, rgba(224, 102, 255, 0.9) 10%, rgba(204, 0, 255, 0.5));
+  border: 2px solid rgba(224, 102, 255, 0.2);
+  transform: translate3d(677px, 800px, 0);
+  animation-delay: -21.5s;
+  width: 55px;
+  height: 55px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(81) {
+  box-shadow: 0 0 69px 5px #db00ff;
+  background: rgba(219, 0, 255, 0.5);
+  background: linear-gradient(top left, rgba(234, 102, 255, 0.9) 10%, rgba(219, 0, 255, 0.5));
+  border: 2px solid rgba(234, 102, 255, 0.2);
+  transform: translate3d(830px, 376px, 0);
+  animation-delay: -2.1s;
+  width: 69px;
+  height: 69px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(82) {
+  box-shadow: 0 0 46px 5px #eb00ff;
+  background: rgba(235, 0, 255, 0.5);
+  background: linear-gradient(top left, rgba(243, 102, 255, 0.9) 10%, rgba(235, 0, 255, 0.5));
+  border: 2px solid rgba(243, 102, 255, 0.2);
+  transform: translate3d(607px, 864px, 0);
+  animation-delay: -39.5s;
+  width: 46px;
+  height: 46px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(83) {
+  box-shadow: 0 0 52px 5px #fa00ff;
+  background: rgba(250, 0, 255, 0.5);
+  background: linear-gradient(top left, rgba(252, 102, 255, 0.9) 10%, rgba(250, 0, 255, 0.5));
+  border: 2px solid rgba(252, 102, 255, 0.2);
+  transform: translate3d(848px, 852px, 0);
+  animation-delay: -5.9s;
+  width: 52px;
+  height: 52px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(84) {
+  box-shadow: 0 0 71px 5px #ff00f5;
+  background: rgba(255, 0, 245, 0.5);
+  background: linear-gradient(top left, rgba(255, 102, 249, 0.9) 10%, rgba(255, 0, 245, 0.5));
+  border: 2px solid rgba(255, 102, 249, 0.2);
+  transform: translate3d(378px, 173px, 0);
+  animation-delay: -21.7s;
+  width: 71px;
+  height: 71px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(85) {
+  box-shadow: 0 0 40px 5px #ff00e6;
+  background: rgba(255, 0, 230, 0.5);
+  background: linear-gradient(top left, rgba(255, 102, 240, 0.9) 10%, rgba(255, 0, 230, 0.5));
+  border: 2px solid rgba(255, 102, 240, 0.2);
+  transform: translate3d(375px, 462px, 0);
+  animation-delay: -2.8s;
+  width: 40px;
+  height: 40px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(86) {
+  box-shadow: 0 0 31px 5px #ff00d6;
+  background: rgba(255, 0, 214, 0.5);
+  background: linear-gradient(top left, rgba(255, 102, 231, 0.9) 10%, rgba(255, 0, 214, 0.5));
+  border: 2px solid rgba(255, 102, 231, 0.2);
+  transform: translate3d(85px, 609px, 0);
+  animation-delay: -6.9s;
+  width: 31px;
+  height: 31px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(87) {
+  box-shadow: 0 0 87px 5px #ff00c7;
+  background: rgba(255, 0, 199, 0.5);
+  background: linear-gradient(top left, rgba(255, 102, 221, 0.9) 10%, rgba(255, 0, 199, 0.5));
+  border: 2px solid rgba(255, 102, 221, 0.2);
+  transform: translate3d(334px, 525px, 0);
+  animation-delay: -16.8s;
+  width: 87px;
+  height: 87px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(88) {
+  box-shadow: 0 0 81px 5px #ff00b8;
+  background: rgba(255, 0, 184, 0.5);
+  background: linear-gradient(top left, rgba(255, 102, 212, 0.9) 10%, rgba(255, 0, 184, 0.5));
+  border: 2px solid rgba(255, 102, 212, 0.2);
+  transform: translate3d(204px, 847px, 0);
+  animation-delay: -36.4s;
+  width: 81px;
+  height: 81px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(89) {
+  box-shadow: 0 0 36px 5px #ff00a8;
+  background: rgba(255, 0, 168, 0.5);
+  background: linear-gradient(top left, rgba(255, 102, 203, 0.9) 10%, rgba(255, 0, 168, 0.5));
+  border: 2px solid rgba(255, 102, 203, 0.2);
+  transform: translate3d(167px, 479px, 0);
+  animation-delay: -14.8s;
+  width: 36px;
+  height: 36px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(90) {
+  box-shadow: 0 0 94px 5px #ff0099;
+  background: rgba(255, 0, 153, 0.5);
+  background: linear-gradient(top left, rgba(255, 102, 194, 0.9) 10%, rgba(255, 0, 153, 0.5));
+  border: 2px solid rgba(255, 102, 194, 0.2);
+  transform: translate3d(324px, 872px, 0);
+  animation-delay: -14.3s;
+  width: 94px;
+  height: 94px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(91) {
+  box-shadow: 0 0 82px 5px #ff008a;
+  background: rgba(255, 0, 138, 0.5);
+  background: linear-gradient(top left, rgba(255, 102, 185, 0.9) 10%, rgba(255, 0, 138, 0.5));
+  border: 2px solid rgba(255, 102, 185, 0.2);
+  transform: translate3d(327px, 90px, 0);
+  animation-delay: -27.7s;
+  width: 82px;
+  height: 82px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(92) {
+  box-shadow: 0 0 64px 5px #ff007a;
+  background: rgba(255, 0, 122, 0.5);
+  background: linear-gradient(top left, rgba(255, 102, 175, 0.9) 10%, rgba(255, 0, 122, 0.5));
+  border: 2px solid rgba(255, 102, 175, 0.2);
+  transform: translate3d(53px, 860px, 0);
+  animation-delay: -5.3s;
+  width: 64px;
+  height: 64px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(93) {
+  box-shadow: 0 0 93px 5px #ff006b;
+  background: rgba(255, 0, 107, 0.5);
+  background: linear-gradient(top left, rgba(255, 102, 166, 0.9) 10%, rgba(255, 0, 107, 0.5));
+  border: 2px solid rgba(255, 102, 166, 0.2);
+  transform: translate3d(73px, 786px, 0);
+  animation-delay: -30.9s;
+  width: 93px;
+  height: 93px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(94) {
+  box-shadow: 0 0 51px 5px #ff005c;
+  background: rgba(255, 0, 92, 0.5);
+  background: linear-gradient(top left, rgba(255, 102, 157, 0.9) 10%, rgba(255, 0, 92, 0.5));
+  border: 2px solid rgba(255, 102, 157, 0.2);
+  transform: translate3d(327px, 25px, 0);
+  animation-delay: -7.3s;
+  width: 51px;
+  height: 51px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(95) {
+  box-shadow: 0 0 96px 5px #ff004c;
+  background: rgba(255, 0, 76, 0.5);
+  background: linear-gradient(top left, rgba(255, 102, 148, 0.9) 10%, rgba(255, 0, 76, 0.5));
+  border: 2px solid rgba(255, 102, 148, 0.2);
+  transform: translate3d(785px, 341px, 0);
+  animation-delay: -18.3s;
+  width: 96px;
+  height: 96px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(96) {
+  box-shadow: 0 0 70px 5px #ff003d;
+  background: rgba(255, 0, 61, 0.5);
+  background: linear-gradient(top left, rgba(255, 102, 139, 0.9) 10%, rgba(255, 0, 61, 0.5));
+  border: 2px solid rgba(255, 102, 139, 0.2);
+  transform: translate3d(344px, 709px, 0);
+  animation-delay: -17.7s;
+  width: 70px;
+  height: 70px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(97) {
+  box-shadow: 0 0 99px 5px #ff002e;
+  background: rgba(255, 0, 46, 0.5);
+  background: linear-gradient(top left, rgba(255, 102, 130, 0.9) 10%, rgba(255, 0, 46, 0.5));
+  border: 2px solid rgba(255, 102, 130, 0.2);
+  transform: translate3d(91px, 570px, 0);
+  animation-delay: -3.2s;
+  width: 99px;
+  height: 99px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(98) {
+  box-shadow: 0 0 75px 5px #ff001f;
+  background: rgba(255, 0, 31, 0.5);
+  background: linear-gradient(top left, rgba(255, 102, 120, 0.9) 10%, rgba(255, 0, 31, 0.5));
+  border: 2px solid rgba(255, 102, 120, 0.2);
+  transform: translate3d(982px, 98px, 0);
+  animation-delay: -11.5s;
+  width: 75px;
+  height: 75px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(99) {
+  box-shadow: 0 0 65px 5px #ff000f;
+  background: rgba(255, 0, 15, 0.5);
+  background: linear-gradient(top left, rgba(255, 102, 111, 0.9) 10%, rgba(255, 0, 15, 0.5));
+  border: 2px solid rgba(255, 102, 111, 0.2);
+  transform: translate3d(278px, 715px, 0);
+  animation-delay: -9.5s;
+  width: 65px;
+  height: 65px; }
+
+/* line 20, D:/_svr/js_game_engine.fire_animation/assets/sass/_fire.scss */
+.boom:nth-child(100) {
+  box-shadow: 0 0 39px 5px red;
+  background: rgba(255, 0, 0, 0.5);
+  background: linear-gradient(top left, rgba(255, 102, 102, 0.9) 10%, rgba(255, 0, 0, 0.5));
+  border: 2px solid rgba(255, 102, 102, 0.2);
+  transform: translate3d(752px, 787px, 0);
+  animation-delay: -20.5s;
+  width: 39px;
+  height: 39px; }
+
+@keyframes drop {
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0; } }
+
+/*# sourceMappingURL=core_fire_animation.css.map */

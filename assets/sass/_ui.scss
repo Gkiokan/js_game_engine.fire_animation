@@ -1,0 +1,21 @@
+
+
+.ui{
+    position:absolute; top:0px; left:0px; right:0px; bottom:0px; z-index:220;
+    
+    
+    .player { 
+        position:absolute; left:0px; top:0px; display:block; width:200px; border:1px solid aqua; 
+        color:#fff;
+        
+        .name { background:#222; }
+        .hp { background:maroon; }
+        .mp { background:aqua; }
+        
+        .mp, .hp { height:10px; width:auto; }
+    }
+    
+    .playerlist { display:none; position:absolute; left:0px; top:200px; display:block; width:200px; border:1px solid aqua; }
+    
+    .chat { display:none; position:absolute; left:0px; bottom:0px; width:200px; height:500px; border:1px solid aqua; }
+}
